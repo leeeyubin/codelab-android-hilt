@@ -1,10 +1,9 @@
 package com.example.android.hilt.di
 
-import android.app.Application
 import android.content.Context
 import androidx.room.Room
+import com.example.android.hilt.ApplicationComponent
 import com.example.android.hilt.data.AppDatabase
-import com.example.android.hilt.data.ApplicationComponent
 import com.example.android.hilt.data.LogDao
 import dagger.Module
 import dagger.Provides
