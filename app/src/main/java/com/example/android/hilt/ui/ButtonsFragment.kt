@@ -25,6 +25,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.android.hilt.LogApplication
 import com.example.android.hilt.R
+import com.example.android.hilt.data.InMemoryLogger
 import com.example.android.hilt.data.LoggerDataSource
 import com.example.android.hilt.data.LoggerLocalDataSource
 import com.example.android.hilt.navigator.AppNavigator
@@ -36,8 +37,9 @@ import javax.inject.Inject
  */
 class ButtonsFragment : Fragment() {
 
-    @Inject private lateinit var logger: LoggerDataSource
-    @Inject private lateinit var navigator: AppNavigator
+    @InMemoryLogger
+    @Inject lateinit var logger: LoggerDataSource
+    @Inject lateinit var navigator: AppNavigator
 
     override fun onCreateView(
         inflater: LayoutInflater,

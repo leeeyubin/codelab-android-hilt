@@ -1,5 +1,7 @@
 package com.example.android.hilt.data
 
+import com.example.android.hilt.ApplicationComponent
+import com.example.android.hilt.LogApplication
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -12,7 +14,7 @@ annotation class InMemoryLogger
 
 @Qualifier
 annotation class DatabaseLogger
-@InstallIn
+@InstallIn(ApplicationComponent::class)
 @Module
 abstract class LoggingDatabaseModule {
     @DatabaseLogger
@@ -21,7 +23,8 @@ abstract class LoggingDatabaseModule {
     abstract fun bindDatabaseLogger(impl: LoggerLocalDataSource): LoggerDataSource
 }
 
-@InstallIn
+
+@InstallIn(ApplicationComponent::class)
 @Module
 abstract class LoggingInMemoryModule {
     @InMemoryLogger
