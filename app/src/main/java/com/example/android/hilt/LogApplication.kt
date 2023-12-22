@@ -24,8 +24,3 @@ import dagger.hilt.android.HiltAndroidApp
 class LogApplication : Application() {
 
 }
-
-@Component
-interface ApplicationComponent {
-    // 컴포넌트에 필요한 의존성에 대한 선언
-}
