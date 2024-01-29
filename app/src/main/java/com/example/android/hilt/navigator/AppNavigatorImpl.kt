@@ -22,9 +22,6 @@ import com.example.android.hilt.ui.ButtonsFragment
 import com.example.android.hilt.ui.LogsFragment
 import javax.inject.Inject
 
-/**
- * Navigator implementation.
- */
 class AppNavigatorImpl @Inject constructor(
     private val activity: FragmentActivity
 ) : AppNavigator {

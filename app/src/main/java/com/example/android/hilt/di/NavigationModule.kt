@@ -1,13 +1,13 @@
 package com.example.android.hilt.di
 
-import androidx.core.app.ActivityCompat
 import com.example.android.hilt.navigator.AppNavigator
 import com.example.android.hilt.navigator.AppNavigatorImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 
-@InstallIn
+@InstallIn(SingletonComponent::class)
 @Module
 abstract class NavigationModule {
     @Binds
